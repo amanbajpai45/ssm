@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सरस्वती शिशु मंदिर बरगदियाघाट, फतेहगढ़</title>
+    <link rel="stylesheet" href="style.css">
+<!-- बिल्कुल नया और वर्किंग Font Awesome Icons Link -->
+<link rel="stylesheet" href="https://cloudflare.com" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+        /* ==========================================
+           वेबसाइट रीसेट और बेस स्टाइलिंग
+           ========================================== */
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ==========================================
+           मुख्य आर्टिकल बॉक्स (News Card Container)
+           ========================================== */
+        .school-article {
+            background: #ffffff;
+            border-top: 5px solid #1e3a8a; /* मुख्य स्कूल थीम कलर */
+            border-radius: 12px;
+            padding: 35px;
+            margin: 0 auto;
+            max-width: 900px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        /* हेडर स्टाइलिंग */
+        .article-header {
+            border-bottom: 3px solid #f59e0b; /* सुनहरी पट्टी */
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .article-main-title {
+            color: #1e3a8a;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .article-meta {
+            color: #dc2626; /* लाल रंग में श्रेणी */
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ==========================================
+           इमेज कंटेनर और स्पेशल बॉर्डर लुक
+           ========================================== */
+        .event-image-container {
+            width: 100%;
+            margin: 25px 0;
+            text-align: center;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            box-sizing: border-box;
+        }
+
+        .event-featured-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            display: inline-block;
+        }
+
+        .image-caption {
+            font-size: 13.5px;
+            color: #64748b;
+            margin-top: 12px;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* ==========================================
+           लेख की सामग्री (Text Content)
+           ========================================== */
+        .article-content p {
+            color: #334155;
+            font-size: 16.5px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .article-content h3 {
+            color: #1e3a8a;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 25px 0 12px 0;
+            border-left: 4px solid #f59e0b;
+            padding-left: 10px;
+        }
+
+        .article-content ul {
+            margin-left: 20px;
+            margin-bottom: 25px;
+            padding-left: 10px;
+        }
+
+        .article-content ul li {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* निचला संदेश बॉक्स */
+        .article-summary {
+            background-color: #f8fafc;
+            border-left: 4px solid #1e3a8a;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 30px;
+            font-style: italic;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* ==========================================
+           मोबाइल रिस्पॉन्सिवनेस सेटिंग 
+           ========================================== */
+        @media screen and (max-width: 768px) {
+            body { padding: 10px; }
+            .school-article { padding: 20px; }
+            .article-main-title { font-size: 22px; }
+            .event-image-container { padding: 8px; }
+            .article-content p, .article-content ul li { font-size: 15px; }
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Top Header Bar with School Full Name & Logo -->
+    <div class="top-header">
+        <div class="logo-area">
+            <!-- पहले लोगो को 'logo-one' क्लास दें -->
+            <img src="logo2.jfif" alt="Logo 1" class="logo-one">
+
+            <div class="school-title">
+                <h1>सरस्वती शिशु मंदिर</h1>
+                <h2>बरगदियाघाट, फतेहगढ़</h2>
+            </div>
+
+            <!-- दूसरे लोगो को 'logo-two' क्लास दें -->
+            <img src="logo1.jfif" alt="Logo 2" class="logo-two">
+        </div>
+    </div>
+
+  <!-- प्रीमियम और प्रोफेशनल मेनू बार -->
+<header class="main-menu">
+    <nav class="nav-container">
+        <!-- मोबाइल के लिए हैमबर्गर मेनू बटन (यदि बाद में इस्तेमाल करना चाहें) -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+            <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> होम</a></li>
+            <li><a href="fees.html">शुल्क विवरण </a></li>
+            <li><a href="uniform.html">विद्यालय गणवेश (Uniform)</a></li>
+            <li><a href="gallery.html">बाल मेला व गैलरी</a></li>
+            <li><a href="event.html">नवीनतम कार्यक्रम</a></li> 
+            <li><a href="transport.html">परिवहन मार्ग </a></li>
+            <li><a href="downloads.html">डाउनलोड्स</a></li>
+            <li><a href="faq.html">सामान्य प्रश्न (FAQ)</a></li>
+            <li><a href="admission.html" class="highlight-admission"><i class="fa-solid fa-graduation-cap"></i> प्रवेश फॉर्म</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Auto Changing Photo Slider (अब चारों स्लाइड्स एक ही कंटेनर के अंदर हैं) -->
+    <section class="slider-container">
+        <div class="slider">
+            
+            <!-- पहली स्लाइड (इसमें active क्लास है जो पहली फोटो दिखाएगी) -->
+            <div class="slide active">
+                <img src="vidhak ji chal rahe1.jpeg" alt="स्कूल बिल्डिंग">
+                <div class="slide-text">
+                    <h1>सरस्वती शिशु मंदिर में आपका स्वागत है</h1>
+                    <p>विद्या भारती से संबद्ध - श्रेष्ठ आचार्य एवं उत्तम शिक्षण पद्धतियाँ।</p>
+                </div>
+            </div>
+            
+            <!-- दूसरी स्लाइड -->
+            <div class="slide">
+                <img src="teacher day spacial.jpeg" alt="स्मार्ट क्लासरूम">
+                <div class="slide-text">
+                    <h1>आधुनिक एवं डिजिटल शिक्षा</h1>
+                    <p>शिशु वाटिका (अरुण) से बच्चों में तकनीकी एवं मानसिक विकास की शुरुआत।</p>
+                </div>
+            </div>
+
+            <!-- तीसरी स्लाइड -->
+            <div class="slide">
+                <img src="third_image.jpeg" alt="सांस्कृतिक कार्यक्रम व खेलकूद">
+                <div class="slide-text">
+                    <h1>संस्कारयुक्त एवं सर्वांगीण विकास</h1>
+                    <p>खेलाधारित शिक्षा, योग, और भारतीय संस्कृति के साथ बच्चों का उज्जवल भविष्य।</p>
+                </div>
+            </div>
+
+            <!-- चौथी स्लाइड (यह अब सही जगह पर आ गई है) -->
+            <div class="slide">
+                <img src="radha krishana 3.jpeg" alt="राधा कृष्ण झांकी">
+                <div class="slide-text">
+                    <h1>सांस्कृतिक एवं धार्मिक संस्कार</h1>
+                    <p>शिशु वाटिका के उत्सवों के माध्यम से बच्चों में सनातन और नैतिक मूल्यों का सिंचन।</p>
+                </div>
+            </div>
+
+        </div> <!-- .slider यहाँ बंद हुआ -->
+    </section> <!-- .slider-container यहाँ बंद हुआ -->
+
+          <!-- 2. सुधरा हुआ प्रधानाचार्य सेक्शन (इमेज और बेहतरीन लेआउट के साथ) -->
+    <section class="main-content-wrapper">
+        <div id="principal" class="principal-section">
+            <div class="principal-container">
+                <div class="principal-img-box">
+                    <!-- प्रधानाचार्य जी की असली फोटो का नाम यहाँ बदल सकते हैं (जैसे principal.jpg) -->
+                    <img src="pradhanfull.jpeg" alt="श्री अवनीश मिश्रा जी" class="p-photo">
+                </div>
+                <div class="principal-text-box">
+                    <h2>प्रधानाचार्य का संदेश (Principal's Desk)</h2>
+                    <h3>सादर प्रणाम,</h3>
+                    <p class="p-message">"सरस्वती शिशु मंदिर बरगदियाघाट, फतेहगढ़ में हमारा संकल्प बच्चों को आधुनिक शिक्षा के साथ-साथ नैतिक, सांस्कृतिक और राष्ट्रीय मूल्यों से ओत-प्रोत करना है। कक्षा अरुण से ही हम बच्चों के सर्वांगीण विकास पर विशेष ध्यान देते हैं।"</p>
+                    <div class="principal-signature">
+                        <h4>श्री अवनीश मिश्रा</h4>
+                        <p class="p-post">प्रधानाचार्य</p>
+                        <p class="p-school-name">S.S.M shivaline fatehgad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                     <!-- नया वर्टिकल नोटिस बोर्ड (7 नोटिस के साथ) -->
+        <div class="notice-board">
+            <h2>📢 सूचना पट्ट (Notice Board)</h2>
+            <!-- direction="up" से खबरें नीचे से ऊपर की ओर चलेंगी -->
+            <marquee direction="up" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();" height="250px">
+                <div class="notice-item">
+                    <span class="notice-date">NEW</span>
+                    <p>सत्र 2026-27 के लिए कक्षा अरुण से 5वीं तक के प्रवेश हेतु पंजीकरण प्रारंभ।</p>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-date">INFO</span>
+                    <p>आगामी सोमवार को विद्यालय में बाल मेला और सांस्कृतिक कार्यक्रम का आयोजन किया जाएगा।</p>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-date">ALERT</span>
+                    <p>ठंड के मौसम को देखते हुए स्कूल का नया समय सुबह 09:00 बजे से दोपहर 02:00 बजे तक रहेगा।</p>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-date">EXAM</span>
+                    <p>कक्षा 1 से 5वीं तक की छमाही परीक्षाएं आगामी 15 तारीख से शुरू हो रही हैं।</p>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-date">HOLIDAY</span>
+                    <p>दीपावली के पावन पर्व पर विद्यालय में 5 दिनों का अवकाश रहेगा।</p>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-date">MEETING</span>
+                    <p>इस शनिवार को अभिभावक-अध्यापक बैठक (PTM) सुबह 10:00 बजे से आयोजित होगी।</p>
+                </div>
+                <div class="notice-item">
+                    <span class="notice-date">SPORTS</span>
+                    <p>वार्षिक खेलकूद प्रतियोगिता के लिए छात्र अपने क्लास टीचर के पास नाम दर्ज कराएं।</p>
+                </div>
+            </marquee>
+        </div>
+
+    </section>
+
+ <!-- मुख्य इवेंट कार्ड -->
+    <article class="school-article">
+        
+        <!-- हेडर -->
+        <div class="article-header">
+            <h2 class="article-main-title">विद्यालय के भव्य कार्यक्रम में मुख्य अतिथि के रूप में पधारे माननीय विधायक मेजर सुनील दत्त द्विवेदी जी</h2>
+            <div class="article-meta">श्रेणी: विद्यालय गतिविधियाँ | मुख्य अतिथि आगमन</div>
+        </div>
+        
+        <!-- चित्र बॉक्स (विधायक जी की फोटो के लिए) -->
+        <div class="event-image-container">
+            <!-- ध्यान दें: जो फोटो आपने भेजी है, उसे 'vidhak_ji_program.jpeg' नाम से इसी फोल्डर में सेव कर लें -->
+            <img src="vidhak_ji_program.jpeg" alt="माननीय विधायक मेजर सुनील दत्त द्विवेदी जी संबोधित करते हुए" class="event-featured-image">
+            <p class="image-caption">चित्र: सरस्वती शिशु मंदिर के भव्य कार्यक्रम में मंच से संबोधित करते हुए माननीय विधायक मेजर सुनील दत्त द्विवेदी जी एवं अन्य गणमान्य अतिथि।</p>
+        </div>
+
+        <!-- मुख्य समाचार लेखन -->
+        <div class="article-content">
+            <p><strong>सरस्वती शिशु मंदिर बरगदियाघाट, फतेहगढ़ (फर्रुखाबाद)</strong> के प्रांगण में एक भव्य और वृहद कार्यक्रम का आयोजन अत्यंत हर्षोल्लास के साथ संपन्न हुआ। इस गौरवपूर्ण अवसर पर क्षेत्र के अत्यंत लोकप्रिय और माननीय विधायक <strong>मेजर सुनील दत्त द्विवेदी जी</strong> मुख्य अतिथि के रूप में उपस्थित रहे। विद्यालय परिवार द्वारा उनका पारंपरिक और आत्मीय स्वागत किया गया।</p>
+            
+            <p>मंच से उपस्थित जनसमूह, आचार्यों और प्रिय छात्र-छात्राओं को संबोधित करते हुए माननीय विधायक जी ने विद्या भारती के शिक्षा मॉडल की भूरि-भूरि प्रशंसा की। उन्होंने कहा कि आज के डिजिटल युग में जहाँ तकनीक हावी हो रही है, वहीं सरस्वती शिशु मंदिर बच्चों को आधुनिक शिक्षा के साथ-साथ सनातन संस्कार, देशभक्ति और नैतिक मूल्यों से जोड़कर राष्ट्र निर्माण का अद्भुत कार्य कर रहा है।</p>
+            
+            <h3>संबोधन के मुख्य बिंदु:</h3>
+            <ul>
+                <li><strong>सर्वांगीण विकास पर बल:</strong> उन्होंने विद्यालय की दीवारों पर अंकित संदेशों (भोजन, व्यायाम, निद्रा, स्वच्छता, प्राण और मन) का उल्लेख करते हुए कहा कि स्वस्थ शरीर और शुद्ध मन ही श्रेष्ठ नागरिक की पहचान है।</li>
+                <li><strong>आचार्यों का वंदन:</strong> समाज को सही दिशा देने और बच्चों के चरित्र निर्माण में जुटे समर्पित आचार्यों के योगदान को उन्होंने अनुकरणीय बताया।</li>
+                <li><strong>छात्रों को प्रेरणा:</strong> उन्होंने छात्रों को जीवन में कड़े अनुशासन, योग और निरंतर अभ्यास के माध्यम से अपने लक्ष्यों को प्राप्त करने के लिए प्रेरित किया।</li>
+            </ul>
+            
+            <p>कार्यक्रम के अंत में विद्यालय की प्रबंध समिति और प्रधानाचार्य जी द्वारा माननीय मुख्य अतिथि जी को स्मृति चिह्न (Memento) भेंट कर सम्मानित किया गया। इस अवसर पर नगर के कई गणमान्य नागरिक, शिक्षाविद और अभिभावक उपस्थित रहे, जिन्होंने छात्रों के उज्ज्वल भविष्य की कामना की।</p>
+            
+            <div class="article-summary">
+                <strong>प्रधानाचार्य का संदेश:</strong> "माननीय विधायक जी का हमारे बीच आना और बच्चों का मार्गदर्शन करना हमारे पूरे विद्यालय परिवार के लिए अत्यंत गर्व और प्रेरणा का क्षण है। हम उनके द्वारा दिखाए गए मार्ग पर चलते हुए शिक्षा और संस्कारों की इस अलख को निरंतर जलाए रखेंगे।"
+            </div>
+        </div>
+        
+    </article>
+
+  <!-- Article 1: Shishu Vatika Section -->
+<article class="school-article">
+    <div class="article-header">
+        <h2 class="article-main-title">शिशु वाटिका: खेल-खेल में संस्कारों और कौशलों की अभिनव शुरुआत</h2>
+        <span class="article-meta">श्रेणी: प्राथमिक शिक्षा | विद्या भारती पद्धति</span>
+    </div>
+    
+    <div class="article-content">
+        <p>सरस्वती शिशु मंदिर में शिक्षा केवल किताबों तक सीमित नहीं है, बल्कि यहाँ बच्चों के सर्वांगीण (चौतरफा) विकास की नींव रखी जाती है। विद्या भारती योजना के अंतर्गत हमारी <strong>शिशु वाटिका (कक्षा अरुण, उदय, प्रभात)</strong> एक ऐसा अनूठा केंद्र है जहाँ नन्हें बच्चों को बिना किसी मानसिक तनाव और बस्ते के बोझ के शिक्षा दी जाती है।</p>
+        
+        <h3>हमारी पद्धति की मुख्य विशेषताएँ:</h3>
+        <ul>
+            <li><strong>अनौपचारिक शिक्षा:</strong> यहाँ शिशु खेल-खेल में, गीतों के माध्यम से और चित्रों को देखकर अक्षरों और संख्याओं का ज्ञान प्राप्त करते हैं।</li>
+            <li><strong>पंचपदी शिक्षण विधि:</strong> हमारी शिक्षण पद्धति भारतीय मनोविज्ञान पर आधारित 'पंचपदी' (अदिति, बोध, अभ्यास, प्रयोग और प्रसार) व्यवस्था पर चलती है, जो बच्चों के मस्तिष्क का प्राकृतिक विकास करती है।</li>
+            <li><strong>इंद्रिय विकास (Sense Training):</strong> मिट्टी के खिलौने बनाना, कागज़ की कलाकृतियाँ और विभिन्न प्रकार के खेलों के ज़रिए बच्चों की पाँचों ज्ञानेंद्रियों को सक्रिय किया जाता है।</li>
+        </ul>
+        
+        <p class="article-summary"><strong>निष्कर्ष:</strong> सरस्वती शिशु मंदिर बच्चों को केवल साक्षर नहीं बनाता, बल्कि उन्हें एक सजग, संवेदनशील और संस्कारी नागरिक के रूप में गढ़ने की शुरुआत उनके बचपन की पहली दहलीज से ही कर देता है।</p>
+    </div>
+</article>
+
+<!-- Article 2: Modern & Digital Education -->
+<article class="school-article">
+    <div class="article-header">
+        <h2 class="article-main-title">सनातन संस्कार और आधुनिक तकनीक: डिजिटल युग में आगे बढ़ता शिशु मंदिर</h2>
+        <span class="article-meta">श्रेणी: आधुनिक तकनीक | डिजिटल शिक्षा</span>
+    </div>
+    
+    <div class="article-content">
+        <p>अक्सर यह माना जाता है कि पारंपरिक पाठशालाओं में आधुनिक तकनीक का अभाव होता है, लेकिन <strong>सरस्वती शिशु मंदिर बरगदियाघाट</strong> ने इस धारणा को पूरी तरह बदल दिया है। हम अपनी गौरवशाली भारतीय संस्कृति और सनातन मूल्यों को संजोते हुए बच्चों को 21वीं सदी की <strong>आधुनिक एवं डिजिटल शिक्षा</strong> प्रदान कर रहे हैं।</p>
+        
+        <h3>हमारा डिजिटल दृष्टिकोण:</h3>
+        <ul>
+            <li><strong>स्मार्ट क्लासरूम (Smart Classrooms):</strong> कठिन और अमूर्त (abstract) विषयों को एनिमेशन और विजुअल्स के ज़रिए आसानी से समझाने के लिए स्कूल में आधुनिक स्मार्ट बोर्ड्स का उपयोग किया जाता है।</li>
+            <li><strong>मानसिक एवं तकनीकी विकास:</strong> कंप्यूटर शिक्षा और तार्किक खेलों (Logical Puzzles) के माध्यम से बच्चों को शुरुआत से ही तकनीक-अनुकूल बनाया जा रहा है, ताकि वे भविष्य की चुनौतियों के लिए तैयार हो सकें।</li>
+            <li><strong>विज्ञान और व्यावहारिक ज्ञान:</strong> केवल रटंत विद्या के बजाय हमारे आचार्य बच्चों को प्रयोगात्मक (Practical) शिक्षा पर ज़ोर देते हैं, जिससे उनके अंदर वैज्ञानिक दृष्टिकोण (Scientific Temperament) विकसित हो।</li>
+        </ul>
+        
+        <p class="article-summary"><strong>निष्कर्ष:</strong> ज्ञान जहाँ भी हो, उसे ग्रहण करना ही विद्या है। हमारा लक्ष्य है कि हमारे छात्र कंप्यूटर और कोडिंग की भाषा भी समझें और अपने बड़ों के चरणों में शीश झुकाना भी न भूलें।</p>
+    </div>
+</article>
+
+<!-- Article 3: Holistic Development -->
+<article class="school-article">
+    <div class="article-header">
+        <h2 class="article-main-title">शिक्षा के साथ संस्कार: बच्चों के सर्वांगीण विकास का संकल्प</h2>
+        <span class="article-meta">श्रेणी: व्यक्तित्व विकास | खेलकूद व योग</span>
+    </div>
+    
+    <div class="article-content">
+        <p>एक आदर्श शिक्षा वही है जो मनुष्य का शारीरिक, मानसिक, बौद्धिक और आध्यात्मिक विकास करे। <strong>सरस्वती शिशु मंदिर</strong> में हमारा मुख्य ध्येय यही 'सर्वांगीण विकास' है। हम केवल परीक्षा के परीक्षाफल (Results) पर ध्यान नहीं देते, बल्कि छात्र के पूरे व्यक्तित्व को निखारने का प्रयास करते हैं।</p>
+        
+        <h3>व्यक्तित्व विकास के मुख्य स्तंभ:</h3>
+        <ul>
+            <li><strong>शारीरिक एवं मानसिक स्वास्थ्य:</strong> प्रतिदिन की वंदना सभा में योग, प्राणायाम और सूर्य नमस्कार हमारे पाठ्यक्रम का एक अनिवार्य हिस्सा हैं, जो बच्चों की रोग प्रतिरोधक क्षमता और एकाग्रता को बढ़ाते हैं।</li>
+            <li><strong>सांस्कृतिक एवं नैतिक शिक्षा:</strong> महापुरुषों की जीवनियाँ, नैतिक कहानियाँ और भारतीय उत्सवों (जैसे कृष्ण जन्माष्टमी, शिक्षक दिवस आदि) के आयोजन से बच्चों में देशभक्ति और सामाजिक समरसता की भावना जागृत होती है।</li>
+            <li><strong>खेलकूद और कला:</strong> खेल के मैदान में अनुशासन, टीम वर्क और नेतृत्व क्षमता (Leadership) का पाठ पढ़ाया जाता है, वहीं संगीत और चित्रकला से बच्चों की रचनात्मकता को पंख मिलते हैं।</li>
+        </ul>
+        
+        <p class="article-summary"><strong>निष्कर्ष:</strong> "सा विद्या या विमुक्तये" के ध्येय वाक्य को चरितार्थ करते हुए, हमारा विद्यालय राष्ट्र को ऐसे नागरिक सौंपने के लिए प्रतिबद्ध है जो चरित्रवान हों, प्रतिभावान हों और समाज के कल्याण के लिए सदैव तत्पर रहें।</p>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+      
+ <!-- Floating Social Media Sidebar (इन-बिल्ट इमोज़ी के साथ) -->
+<div class="social-sidebar">
+    <!-- WhatsApp -->
+    <a href="यहाँ_लिंक_डालें" class="social-icon whatsapp" target="_blank">
+        <span class="emoji-icon">💬</span>
+        <span>WhatsApp</span>
+    </a>
+    
+    <!-- YouTube -->
+    <a href="यहाँ_लिंक_डालें" class="social-icon youtube" target="_blank">
+        <span class="emoji-icon">▶️</span>
+        <span>YouTube</span>
+    </a>
+    
+    <!-- Instagram -->
+    <a href="यहाँ_लिंक_डालें" class="social-icon instagram" target="_blank">
+        <span class="emoji-icon">📸</span>
+        <span>Instagram</span>
+    </a>
+    
+    <!-- Facebook -->
+    <a href="यहाँ_लिंक_डालें" class="social-icon facebook" target="_blank">
+        <span class="emoji-icon">👥</span>
+        <span>Facebook</span>
+    </a>
+</div>
+
+
+
+<!-- ==========================================
+     वेबसाइट के लिए सबसे निचली छोटी नियम, शर्तें एवं डेवलपर पट्टी 
+     ========================================== -->
+<footer class="bottom-mini-banner">
+    <div class="mini-banner-container">
+        <!-- बाईं तरफ कॉपीराइट और डेवलपर की जानकारी -->
+        <div class="footer-left-info">
+            <p class="copyright-text">
+                © 2026 सरस्वती शिशु मंदिर, बरगदियाघाट, फतेहगढ़। सर्वाधिकार सुरक्षित।
+            </p>
+            <p class="developer-text">
+                वेबसाइट डेवलपर: <strong>Aman Bajpai</strong> | संपर्क: <a href="mailto:ab9728136@gmail.com">ab9728136@gmail.com</a>
+            </p>
+            <p class="developer-address">
+                पता: कादरी गेट, लखूला रोड, फर्रुखाबाद (209625)
+            </p>
+        </div>
+        
+        <!-- दाईं तरफ छोटी लिंक्स और लाइव स्टेटस -->
+        <div class="mini-links-container">
+            <div class="mini-links">
+                <a href="#">नियम एवं शर्तें (Terms)</a>
+                <span>|</span>
+                <a href="#">गोपनीयता नीति (Privacy)</a>
+            </div>
+            <div class="live-status">
+                <span class="status-dot"></span> Live on GitHub
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    /* ==========================================
+       सबसे निचली छोटी पट्टी की CSS (हल्का काला लुक)
+       ========================================== */
+    .bottom-mini-banner {
+        background-color: #121214; /* हल्का काला / गहरा चारकोल रंग */
+        border-top: 1px solid #232329; /* बहुत पतली और हल्की बॉर्डर */
+        padding: 15px 30px; 
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 50px; /* ऊपर के कंटेंट से दूरी */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .mini-banner-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-left-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* छोटे अक्षरों में जानकारी (टेक्स्ट) */
+    .copyright-text {
+        color: #8a8a93; /* धुंधला/हल्का ग्रे रंग */
+        font-size: 13px; 
+        margin: 0;
+        font-weight: 500;
+    }
+
+    /* डेवलपर क्रेडिट की स्टाइलिंग */
+    .developer-text, .developer-address {
+        color: #6b7280; /* थोड़ा और हल्का ग्रे ताकि कॉपीराइट मुख्य रहे */
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .developer-text strong {
+        color: #f59e0b; /* डेवलपर का नाम स्कूल के सुनहरे रंग में चमकेगा */
+    }
+
+    .developer-text a {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .developer-text a:hover {
+        color: #ffffff; /* जीमेल पर माउस ले जाने पर सफ़ेद होगा */
+        text-decoration: underline;
+    }
+
+    /* दाईं तरफ का बॉक्स */
+    .mini-links-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    .mini-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #374151; 
+        font-size: 12.5px;
+    }
+
+    .mini-links a {
+        color: #8a8a93;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .mini-links a:hover {
+        color: #f59e0b;
+    }
+
+    /* GitHub लाइव स्टेटस (छोटा ग्रीन डॉट एनीमेशन के साथ) */
+    .live-status {
+        color: #10b981; /* हरा रंग */
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(16, 185, 129, 0.1);
+        padding: 4px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .status-dot {
+        width: 7px;
+        height: 7px;
+        background-color: #10b981;
+        border-radius: 50%;
+        display: inline-block;
+        box-shadow: 0 0 8px #10b981;
+    }
+
+    /* ==========================================
+       मोबाइल स्क्रीन के लिए रिस्पॉन्सिव सेटिंग
+       ========================================== */
+    @media screen and (max-width: 768px) {
+        .mini-banner-container {
+            flex-direction: column; 
+            text-align: center;
+            align-items: center;
+        }
+        .footer-left-info {
+            align-items: center;
+        }
+        .mini-links-container {
+            align-items: center;
+            margin-top: 5px;
+        }
+    }
+</style>
+
+
+   
+<!-- सबसे महत्वपूर्ण: जावास्क्रिप्ट फाइल को यहाँ लिंक करना ज़रूरी है -->
+    <script src="script.js"></script>
+</body>
+</html>

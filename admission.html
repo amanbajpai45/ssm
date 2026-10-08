@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ऑनलाइन प्रवेश फॉर्म - सरस्वती शिशु मंदिर</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-header">
+        <div class="logo-area">
+            <img src="logo1.jfif" alt="Logo 1" class="logo-one">
+            <div class="school-title">
+                <h1>सरस्वती शिशु मंदिर</h1>
+                <h2>बरगदियाघाट, फतेहगढ़</h2>
+            </div>
+            <img src="logo2.jfif" alt="Logo 2" class="logo-two">
+        </div>
+    </div>
+
+      <!-- प्रीमियम और प्रोफेशनल मेनू बार -->
+<header class="main-menu">
+    <nav class="nav-container">
+        <!-- मोबाइल के लिए हैमबर्गर मेनू बटन (यदि बाद में इस्तेमाल करना चाहें) -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+            <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> होम</a></li>
+            <li><a href="fees.html">शुल्क विवरण </a></li>
+            <li><a href="uniform.html">विद्यालय गणवेश (Uniform)</a></li>
+            <li><a href="gallery.html">बाल मेला व गैलरी</a></li>
+            <li><a href="event.html">नवीनतम कार्यक्रम</a></li> 
+            <li><a href="transport.html">परिवहन मार्ग </a></li>
+            <li><a href="downloads.html">डाउनलोड्स</a></li>
+            <li><a href="faq.html">सामान्य प्रश्न (FAQ)</a></li>
+            <li><a href="admission.html" class="highlight-admission"><i class="fa-solid fa-graduation-cap"></i> प्रवेश फॉर्म</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <section class="section-padding">
+        <h2>📝 ऑनलाइन प्रवेश फॉर्म (Admission Form)</h2>
+        <p class="section-desc">अपने बच्चे के एडमिशन के लिए नीचे दिया गया फॉर्म भरें, हमारा स्कूल आपसे संपर्क करेगा।</p>
+        
+        <form id="admissionForm" class="admission-form">
+            <div class="form-group">
+                <label for="studentName">छात्र/छात्रा का नाम *</label>
+                <input type="text" id="studentName" required placeholder="बच्चे का पूरा नाम लिखें">
+            </div>
+            <div class="form-group">
+                <label for="parentName">माता/पिता का नाम *</label>
+                <input type="text" id="parentName" required placeholder="माता या पिता का नाम">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="className">प्रवेश हेतु कक्षा *</label>
+                    <select id="className" required>
+                        <option value="">कक्षा चुनें</option>
+                        <option value="अरुण">अरुण (Nursery)</option>
+                        <option value="1">कक्षा 1</option>
+                        <option value="2">कक्षा 2</option>
+                        <option value="3">कक्षा 3</option>
+                        <option value="4">कक्षा 4</option>
+                        <option value="5">कक्षा 5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mobileNumber">मोबाइल नंबर *</label>
+                    <input type="tel" id="mobileNumber" required placeholder="10 अंकों का नंबर">
+                </div>
+            </div>
+            <button type="submit" class="submit-btn">फॉर्म सबमिट करें</button>
+        </form>
+    </section>
+
+    <!-- फॉर्म का डेटा प्रोसेस करने की स्क्रिप्ट -->
+    <script src="script.js"></script>
+</body>
+</html>

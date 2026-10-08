@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नवीनतम घटनाक्रम - सरस्वती शिशु मंदिर</title>
+    <style>
+        /* ==========================================
+           वेबसाइट रीसेट और बेस स्टाइलिंग
+           ========================================== */
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f1f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* ==========================================
+           मुख्य आर्टिकल बॉक्स (News Card Container)
+           ========================================== */
+        .school-article {
+            background: #ffffff;
+            border-top: 5px solid #1e3a8a; /* मुख्य स्कूल थीम कलर */
+            border-radius: 12px;
+            padding: 35px;
+            margin: 0 auto;
+            max-width: 900px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+        }
+
+        /* हेडर स्टाइलिंग */
+        .article-header {
+            border-bottom: 3px solid #f59e0b; /* सुनहरी पट्टी */
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .article-main-title {
+            color: #1e3a8a;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .article-meta {
+            color: #dc2626; /* लाल रंग में श्रेणी */
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ==========================================
+           इमेज कंटेनर और स्पेशल बॉर्डर लुक
+           ========================================== */
+        .event-image-container {
+            width: 100%;
+            margin: 25px 0;
+            text-align: center;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            box-sizing: border-box;
+        }
+
+        .event-featured-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            display: inline-block;
+        }
+
+        .image-caption {
+            font-size: 13.5px;
+            color: #64748b;
+            margin-top: 12px;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* ==========================================
+           लेख की सामग्री (Text Content)
+           ========================================== */
+        .article-content p {
+            color: #334155;
+            font-size: 16.5px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .article-content h3 {
+            color: #1e3a8a;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 25px 0 12px 0;
+            border-left: 4px solid #f59e0b;
+            padding-left: 10px;
+        }
+
+        .article-content ul {
+            margin-left: 20px;
+            margin-bottom: 25px;
+            padding-left: 10px;
+        }
+
+        .article-content ul li {
+            color: #475569;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* निचला संदेश बॉक्स */
+        .article-summary {
+            background-color: #f8fafc;
+            border-left: 4px solid #1e3a8a;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 30px;
+            font-style: italic;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* ==========================================
+           मोबाइल रिस्पॉन्सिवनेस सेटिंग 
+           ========================================== */
+        @media screen and (max-width: 768px) {
+            body { padding: 10px; }
+            .school-article { padding: 20px; }
+            .article-main-title { font-size: 22px; }
+            .event-image-container { padding: 8px; }
+            .article-content p, .article-content ul li { font-size: 15px; }
+        }
+    </style>
+</head>
+<body>
+ 
+ <div class="top-header">
+        <div class="logo-area">
+            <img src="logo1.jfif" alt="Logo 1" class="logo-one">
+            <div class="school-title">
+                <h1>सरस्वती शिशु मंदिर</h1>
+                <h2>बरगदियाघाट, फतेहगढ़</h2>
+            </div>
+            <img src="logo2.jfif" alt="Logo 2" class="logo-two">
+        </div>
+    </div>
+
+   <!-- प्रीमियम और प्रोफेशनल मेनू बार -->
+<header class="main-menu">
+    <nav class="nav-container">
+        <!-- मोबाइल के लिए हैमबर्गर मेनू बटन (यदि बाद में इस्तेमाल करना चाहें) -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+            <ul class="nav-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> होम</a></li>
+               <li><a href="vandana.html"><i class="fa-solid fa-hands-praying"></i> वंदना सभा</a></li>
+            <li><a href="uniform.html">विद्यालय गणवेश (Uniform)</a></li>
+            <li><a href="gallery.html">बाल मेला व गैलरी</a></li>
+            <li><a href="event.html">नवीनतम कार्यक्रम</a></li> 
+            <li><a href="transport.html">परिवहन मार्ग </a></li>
+            <li><a href="downloads.html">डाउनलोड्स</a></li>
+            <li><a href="faq.html">सामान्य प्रश्न (FAQ)</a></li>
+            <li><a href="admission.html" class="highlight-admission"><i class="fa-solid fa-graduation-cap"></i> प्रवेश फॉर्म</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+    <!-- मुख्य इवेंट कार्ड -->
+    <article class="school-article">
+        
+        <!-- हेडर -->
+        <div class="article-header">
+            <h2 class="article-main-title">विद्यालय के भव्य कार्यक्रम में मुख्य अतिथि के रूप में पधारे माननीय विधायक मेजर सुनील दत्त द्विवेदी जी</h2>
+            <div class="article-meta">श्रेणी: विद्यालय गतिविधियाँ | मुख्य अतिथि आगमन</div>
+        </div>
+        
+        <!-- चित्र बॉक्स (विधायक जी की फोटो के लिए) -->
+        <div class="event-image-container">
+            <!-- ध्यान दें: जो फोटो आपने भेजी है, उसे 'vidhak_ji_program.jpeg' नाम से इसी फोल्डर में सेव कर लें -->
+            <img src="vidhak_ji_program.jpeg" alt="माननीय विधायक मेजर सुनील दत्त द्विवेदी जी संबोधित करते हुए" class="event-featured-image">
+            <p class="image-caption">चित्र: सरस्वती शिशु मंदिर के भव्य कार्यक्रम में मंच से संबोधित करते हुए माननीय विधायक मेजर सुनील दत्त द्विवेदी जी एवं अन्य गणमान्य अतिथि।</p>
+        </div>
+
+        <!-- मुख्य समाचार लेखन -->
+        <div class="article-content">
+            <p><strong>सरस्वती शिशु मंदिर बरगदियाघाट, फतेहगढ़ (फर्रुखाबाद)</strong> के प्रांगण में एक भव्य और वृहद कार्यक्रम का आयोजन अत्यंत हर्षोल्लास के साथ संपन्न हुआ। इस गौरवपूर्ण अवसर पर क्षेत्र के अत्यंत लोकप्रिय और माननीय विधायक <strong>मेजर सुनील दत्त द्विवेदी जी</strong> मुख्य अतिथि के रूप में उपस्थित रहे। विद्यालय परिवार द्वारा उनका पारंपरिक और आत्मीय स्वागत किया गया।</p>
+            
+            <p>मंच से उपस्थित जनसमूह, आचार्यों और प्रिय छात्र-छात्राओं को संबोधित करते हुए माननीय विधायक जी ने विद्या भारती के शिक्षा मॉडल की भूरि-भूरि प्रशंसा की। उन्होंने कहा कि आज के डिजिटल युग में जहाँ तकनीक हावी हो रही है, वहीं सरस्वती शिशु मंदिर बच्चों को आधुनिक शिक्षा के साथ-साथ सनातन संस्कार, देशभक्ति और नैतिक मूल्यों से जोड़कर राष्ट्र निर्माण का अद्भुत कार्य कर रहा है।</p>
+            
+            <h3>संबोधन के मुख्य बिंदु:</h3>
+            <ul>
+                <li><strong>सर्वांगीण विकास पर बल:</strong> उन्होंने विद्यालय की दीवारों पर अंकित संदेशों (भोजन, व्यायाम, निद्रा, स्वच्छता, प्राण और मन) का उल्लेख करते हुए कहा कि स्वस्थ शरीर और शुद्ध मन ही श्रेष्ठ नागरिक की पहचान है।</li>
+                <li><strong>आचार्यों का वंदन:</strong> समाज को सही दिशा देने और बच्चों के चरित्र निर्माण में जुटे समर्पित आचार्यों के योगदान को उन्होंने अनुकरणीय बताया।</li>
+                <li><strong>छात्रों को प्रेरणा:</strong> उन्होंने छात्रों को जीवन में कड़े अनुशासन, योग और निरंतर अभ्यास के माध्यम से अपने लक्ष्यों को प्राप्त करने के लिए प्रेरित किया।</li>
+            </ul>
+            
+            <p>कार्यक्रम के अंत में विद्यालय की प्रबंध समिति और प्रधानाचार्य जी द्वारा माननीय मुख्य अतिथि जी को स्मृति चिह्न (Memento) भेंट कर सम्मानित किया गया। इस अवसर पर नगर के कई गणमान्य नागरिक, शिक्षाविद और अभिभावक उपस्थित रहे, जिन्होंने छात्रों के उज्ज्वल भविष्य की कामना की।</p>
+            
+            <div class="article-summary">
+                <strong>प्रधानाचार्य का संदेश:</strong> "माननीय विधायक जी का हमारे बीच आना और बच्चों का मार्गदर्शन करना हमारे पूरे विद्यालय परिवार के लिए अत्यंत गर्व और प्रेरणा का क्षण है। हम उनके द्वारा दिखाए गए मार्ग पर चलते हुए शिक्षा और संस्कारों की इस अलख को निरंतर जलाए रखेंगे।"
+            </div>
+        </div>
+        
+    </article>
+
+</body>
+</html>

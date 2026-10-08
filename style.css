@@ -1,0 +1,1068 @@
+/* ==========================================
+   1. बेसिक रीसेट और यूनिवर्सल सेटिंग्स
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   2. नया टॉप हेडर (स्कूल का नाम और लोगो एरिया)
+   ========================================== */
+.top-header {
+    background-color: #ffffff;
+    padding: 15px 50px;
+    border-bottom: 3px solid #f59e0b;
+}
+
+.logo-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* पहले लोगो का साइज (जैसे बड़ा रखने के लिए) */
+.logo-one {
+    width: 200px;  /* चौड़ाई */
+    height: 200px; /* लंबाई */
+    object-fit: contain;
+    border: none;
+}
+
+/* दूसरे लोगो का साइज (जैसे छोटा रखने के लिए) */
+.logo-two {
+    width: 200px;   /* चौड़ाई */
+    height: 200px;  /* लंबाई */
+    object-fit: contain;
+    border: none;
+}
+
+
+
+
+.school-title {
+    text-align: center;
+    flex: 1;
+    padding: 0 15px; /* लोगो और नाम के बीच सुरक्षित गैप */
+}
+
+/* स्कूल का मुख्य नाम (बड़ा और गहरा) */
+.school-title h1 {
+    color: #1e3a8a;
+    font-size: 80px;      /* पहले 32px था, अब बड़ा कर दिया गया है */
+    font-weight: 800;      /* अक्षरों को और गाढ़ा (Bold) किया गया है */
+    letter-spacing: 1.4px; /* अक्षरों के बीच सुंदर स्पेस */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* हल्का 3D लुक */
+}
+
+/* जगह का नाम (बरगदियाघाट, फतेहगढ़) */
+.school-title h2 {
+    color: #dc2626;
+    font-size: 45px;      /* पहले 22px था, अब बड़ा कर दिया गया है */
+    font-weight: 700;
+    margin-top: 13px;      /* मुख्य नाम से सटीक दूरी */
+    letter-spacing: 1px;
+}
+
+/* नीचे वाली लाइन (कक्षा अरुण से पंचमी तक...) */
+.school-title p {
+    color: #475569;
+    font-size: 15px;      /* पहले 14px था, अब थोड़ा बड़ा किया है */
+    margin-top: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   3. प्रीमियम एवं प्रोफेशनल मेनू बार डिज़ाइन 
+   ========================================== */
+.main-menu {
+    background-color: #1e3a8a; /* गहरा रॉयल ब्लू रंग */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid #f59e0b; /* नीचे शानदार सुनहरी पट्टी */
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap; /* स्क्रीन छोटी होने पर अपने आप दूसरी लाइन में आएगा */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 6px; /* आइकॉन और टेक्स्ट के बीच की दूरी */
+    color: #f8fafc;
+    text-decoration: none;
+    padding: 16px 18px;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: all 0.3s ease;
+}
+
+/* साधारण मेनू आइटम्स पर होवर इफ़ेक्ट */
+.nav-links li a:hover {
+    color: #f59e0b; /* टेक्स्ट का रंग सुनहरा होगा */
+    background-color: rgba(255, 255, 255, 0.08); 
+}
+
+/* प्रोफेशनल बॉटम बॉर्डर एनीमेशन (अंडरलाइन इफ़ेक्ट) */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #f59e0b;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links li a:hover::after {
+    width: 100%; /* होवर करने पर लाइन बीच से दोनों तरफ फैलेगी */
+}
+
+/* 🌟 स्पेशल हाइलाइट: एडमिशन फॉर्म बटन */
+.nav-links li a.highlight-admission {
+    background-color: #dc2626; /* आकर्षक लाल रंग */
+    color: #ffffff !important;
+    border-radius: 4px;
+    margin: 5px 8px;
+    padding: 10px 18px;
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+}
+
+.nav-links li a.highlight-admission:hover {
+    background-color: #b91c1c;
+    box-shadow: 0 6px 15px rgba(220, 38, 38, 0.5);
+    transform: translateY(-1px);
+}
+
+/* एडमिशन बटन से अंडरलाइन इफेक्ट हटाने के लिए */
+.nav-links li a.highlight-admission::after {
+    display: none;
+}
+
+/* मोबाइल व्यू के लिए हैमबर्गर आइकॉन (शुरुआत में छुपा रहेगा) */
+.menu-toggle {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+/* ==========================================
+   मोबाइल स्क्रीन के लिए रिस्पॉन्सिव सेटिंग्स
+   ========================================== */
+@media screen and (max-width: 1024px) {
+    .nav-links li a {
+        padding: 12px 14px;
+        font-size: 13.5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* फोन पर मेनू एक के नीचे एक आ जाएगा */
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links li a {
+        justify-content: center;
+        padding: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .nav-links li a.highlight-admission {
+        margin: 10px 20px;
+    }
+}
+
+
+/* ==========================================
+   4. फोटो स्लाइडर डिज़ाइन
+   ========================================== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* आप अपनी ज़रूरत के हिसाब से हाइट बदल सकते हैं */
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* स्मूथ बदलने के लिए */
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* फोटो स्क्रीन पर फिट बैठेगी */
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6); /* टेक्स्ट के पीछे हल्का काला बैकग्राउंड ताकि साफ़ दिखे */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* ==========================================
+   प्रधानाचार्य सेक्शन का नया प्रोफेशनल डिज़ाइन
+   ========================================== */
+.principal-section {
+    flex: 2;
+    min-width: 300px;
+}
+
+.principal-container {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* फोटो और टेक्स्ट आमने-सामने */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap; /* मोबाइल पर ऊपर-नीचे करने के लिए */
+}
+
+/* फोटो का बॉक्स और उसका आकार */
+.principal-img-box {
+    flex: 1;
+    min-width: 220px;
+    background-color: #f8fafc;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-photo {
+    width: 100%;
+    max-width: 200px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px; /* किनारों को थोड़ा गोल लुक */
+    border: 3px solid #1e3a8a; /* फोटो के चारों तरफ स्कूल थीम का गहरा नीला बॉर्डर */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* टेक्स्ट बॉक्स और फॉन्ट सेटिंग्स */
+.principal-text-box {
+    flex: 2;
+    padding: 30px;
+    min-width: 300px;
+}
+
+.principal-text-box h2 {
+    color: #1e3a8a;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f59e0b; /* नीचे सुनहरी पतली लाइन */
+    padding-bottom: 8px;
+}
+
+.principal-text-box h3 {
+    color: #475569;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.p-message {
+    font-size: 16px;
+    color: #334155;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+/* नाम और पद का डिज़ाइन */
+.principal-signature h4 {
+    color: #1e3a8a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.p-post {
+    color: #dc2626; /* लाल रंग में पद */
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.p-school-name {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 2px;
+}
+
+/* मोबाइल रिस्पॉन्सिवनेस */
+@media (max-width: 600px) {
+    .principal-container {
+        flex-direction: column; /* मोबाइल पर फोटो ऊपर और संदेश नीचे दिखेगा */
+    }
+    .principal-img-box {
+        padding-bottom: 0;
+    }
+}
+
+/* नीचे से ऊपर चलने वाले नोटिस बोर्ड का डिज़ाइन */
+.notice-board {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    min-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.notice-board h2 {
+    color: #dc2626;
+    font-size: 22px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fca5a5;
+    padding-bottom: 10px;
+}
+
+/* हर नोटिस का स्टाइल और उनके बीच की दूरी */
+.notice-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #cbd5e1; /* नोटिस के बीच धुंधली लाइन */
+}
+
+.notice-date {
+    background: #dc2626;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.notice-item p { 
+    font-size: 14px; 
+    color: #334155; 
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+
+/* ==========================================
+   6. यूनिवर्सल सेक्शन्स सेटिंग्स (गैलरी, फीस आदि के लिए)
+   ========================================== */
+.section-padding { padding: 60px 20px; text-align: center; max-width: 1200px; margin: 0 auto; }
+.grey-bg { background-color: #f8fafc; max-width: 100%; }
+.section-padding h2 { color: #1e3a8a; margin-bottom: 10px; font-size: 28px; }
+.section-desc { color: #64748b; margin-bottom: 30px; font-size: 16px; }
+
+/* वंदना व बाल मेला गैलरी */
+.gallery-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.gallery-item { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); width: 280px; }
+.gallery-item img { width: 100%; height: 180px; object-fit: cover; border-radius: 6px; }
+.gallery-item h4 { margin-top: 10px; color: #334155; }
+
+/* कक्षाएं सेक्शन */
+.courses-section { padding: 60px 20px; text-align: center; background: #f1f5f9; }
+.courses-section h2 { color: #1e3a8a; margin-bottom: 30px; }
+.courses-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.course-card { background: white; border-radius: 10px; padding: 25px; width: 280px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.course-icon { font-size: 35px; margin-bottom: 10px; }
+
+/* ==========================================
+   7. यूनिफॉर्म एवं फीस के लिए टेबल डिज़ाइन 
+   ========================================== */
+.table-container { overflow-x: auto; max-width: 800px; margin: 0 auto; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+th { background-color: #1e3a8a; color: white; }
+tr:hover { background-color: #f1f5f9; }
+
+/* परिवहन कार्ड्स */
+.routes-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.route-card { background: #fff; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; width: 350px; text-align: left; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.route-card h3 { color: #f59e0b; margin-bottom: 10px; }
+
+/* डाउनलोड बटन्स */
+.download-links { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
+.download-btn { display: block; background: white; border: 1px solid #1e3a8a; padding: 15px; color: #1e3a8a; text-decoration: none; border-radius: 6px; font-weight: bold; transition: 0.3s; text-align: left; }
+.download-btn:hover { background: #1e3a8a; color: white; }
+
+/* अक्सर पूछे जाने वाले प्रश्न (FAQ) */
+.faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
+.faq-item { margin-bottom: 20px; background: white; padding: 15px; border-radius: 6px; border-left: 4px solid #f59e0b; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.faq-item h4 { color: #1e3a8a; margin-bottom: 5px; }
+
+/* ==========================================
+   8. एडमिशन फॉर्म एवं फुटर संपर्क
+   ========================================== */
+.admission-section { padding: 60px 20px; max-width: 700px; margin: 0 auto; text-align: center; }
+.admission-section h2 { color: #1e3a8a; margin-bottom: 10px; }
+.admission-section p { color: #64748b; margin-bottom: 30px; }
+
+.admission-form {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group { margin-bottom: 20px; }
+.form-row { display: flex; gap: 20px; }
+.form-row .form-group { flex: 1; }
+.admission-form label { display: block; margin-bottom: 8px; font-weight: 600; color: #334155; }
+.admission-form input, .admission-form select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 16px; }
+
+.submit-btn {
+    background: #f59e0b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+.submit-btn:hover { background: #d97706; }
+
+.contact-section { background-color: #1e3a8a; color: white; padding: 40px 20px; text-align: center; }
+.contact-section h2 { margin-bottom: 20px; }
+.contact-info { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+.info-box { background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 8px; min-width: 250px; }
+.info-box h3 { font-size: 18px; margin-bottom: 5px; }
+.info-box p a { color: #f59e0b; text-decoration: none; font-weight: bold; }
+
+/* ==========================================
+   9. मोबाइल रिस्पॉन्सिव सेटिंग्स
+   ========================================== */
+@media (max-width: 768px) {
+    .main-menu nav ul {
+        justify-content: space-around;
+    }
+    .main-menu nav ul li a {
+        padding: 12px 10px;
+        font-size: 13px; /* छोटी स्क्रीन पर फ़ॉन्ट ऑटोमैटिक सेट होगा */
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0; 
+    }
+} /* 👈 यहाँ ब्रैकेट बंद नहीं था, इसे अब सही कर दिया गया है */
+
+/* ==========================================
+   क्विक लिंक्स शॉर्टकट डिज़ाइन
+   ========================================== */
+.quick-links-section {
+    background-color: #f8fafc;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+.quick-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.quick-link-btn {
+    display: inline-block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.quick-link-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+.btn-green { background-color: #10b981; }
+.btn-blue { background-color: #3b82f6; }
+.btn-orange { background-color: #f97316; }
+
+/* ==========================================
+   होनहार छात्र (Toppers Section) डिज़ाइन
+   ========================================== */
+.toppers-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.toppers-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 30px auto 0 auto;
+}
+.topper-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px 20px;
+    width: 280px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+.topper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #f59e0b;
+}
+.medal-icon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 35px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.topper-img img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1e3a8a;
+    margin-bottom: 15px;
+}
+.topper-card h3 {
+    color: #1e3a8a;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.topper-class {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.topper-rank {
+    display: inline-block;
+    background: #fef3c7;
+    color: #d97706;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* कॉमन सेटिंग्स (सभी फोटोज़ के लिए बेसिक सेटिंग) */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.photo-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.photo-item img {
+    width: 100%;
+    object-fit: cover; /* फोटो बिना खिंचे बॉक्स में फिट होगी */
+}
+.photo-caption {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ==========================================
+   5. फ्लोटिंग सोशल मीडिया साइडबार डिज़ाइन (आइकॉन फिक्स के साथ)
+   ========================================== */
+.social-sidebar {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 9999; /* ताकि यह स्लाइडर के ऊपर दिखे */
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* आइकॉन को बाईं तरफ रखेगा */
+    width: 55px; /* बिना क्लिक किए पट्टी की चौड़ाई - आइकॉन दिखने के लिए पर्याप्त है */
+    height: 50px;
+    margin: 4px 0;
+    padding: 0 12px; /* आइकॉन को पट्टी के अंदर सही जगह पर रखने के लिए */
+    background-color: #333;
+    border-radius: 8px 0 0 8px; /* बाएं कोने गोल */
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* नाम को छुपाने के लिए ज़रूरी है */
+    box-shadow: -2px 4px 10px rgba(0,0,0,0.15);
+}
+
+/* माउस ले जाने (Hover) पर पूरा नाम बाहर आएगा */
+.social-icon:hover {
+    width: 160px; /* नाम दिखने पर चौड़ाई बढ़ जाएगी */
+}
+
+/* इमेज आइकॉन को हमेशा दिखाने के लिए सेटिंग */
+.social-icon img {
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px; /* इसे सिकुड़ने से रोकेगा */
+    object-fit: contain;
+    display: block !important;
+}
+
+/* अगर आप इमोज़ी (Emoji) इस्तेमाल कर रहे हैं तो उसके लिए */
+.social-icon .emoji-icon {
+    font-size: 24px;
+    min-width: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.social-icon span:not(.emoji-icon) {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 15px;
+    white-space: nowrap; /* टेक्स्ट लाइन न बदले */
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* होवर करने पर नाम दिखेगा */
+.social-icon:hover span:not(.emoji-icon) {
+    opacity: 1; 
+}
+
+/* सोशल मीडिया ब्रांड कलर्स */
+.social-icon.whatsapp { background-color: #25D366; }
+.social-icon.youtube { background-color: #FF0000; }
+.social-icon.instagram { background-color: #E1306C; }
+.social-icon.facebook { background-color: #1877F2; }
+
+/* मोबाइल स्क्रीन के लिए सेटिंग */
+@media screen and (max-width: 768px) {
+    .social-sidebar {
+        top: auto;
+        bottom: 10px;
+        right: 10px;
+        flex-direction: row; /* फोन पर नीचे एक लाइन में */
+        transform: none;
+    }
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%; /* गोल बटन */
+        margin: 0 5px;
+        padding: 0;
+        justify-content: center;
+    }
+    .social-icon:hover {
+        width: 45px;
+    }
+    .social-icon span:not(.emoji-icon) {
+        display: none;
+    }
+}
+/* ==========================================
+   6. स्कूल आर्टिकल्स / ब्लॉग सेक्शन डिज़ाइन 
+   ========================================== */
+.school-article {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.article-header {
+    border-bottom: 3px solid #f59e0b; /* सुनहरी पट्टी */
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.article-main-title {
+    color: #1e3a8a; /* गहरा रॉयल ब्लू */
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.article-meta {
+    color: #dc2626; /* लाल रंग में कैटेगरी */
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.article-content p {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.article-content h3 {
+    color: #1e3a8a;
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+}
+
+.article-content ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.article-content ul li {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.article-summary {
+    background-color: #f8fafc;
+    border-left: 4px solid #1e3a8a;
+    padding: 15px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 20px;
+}
+/* ==========================================
+   8. आचार्या परिवार स्पेशल फीचर डिज़ाइन 
+   ========================================== */
+.acharya-feature-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #dc2626; /* दीदी जी के सम्मान में लाल रंग का बॉर्डर */
+    box-sizing: border-box;
+}
+
+.acharya-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* मोबाइल पर रिस्पॉन्सिव बनाने के लिए */
+}
+
+/* लेख का बॉक्स */
+.acharya-text-box {
+    flex: 1.2;
+    min-width: 320px;
+}
+
+.acharya-text-box .article-main-title {
+    color: #1e3a8a;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.acharya-text-box .article-meta {
+    color: #dc2626;
+    font-size: 13.5px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.acharya-text-box .article-content p {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.acharya-quote {
+    background-color: #f8fafc;
+    border-left: 4px solid #1e3a8a;
+    padding: 12px 20px;
+    font-style: italic;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-top: 20px;
+    border-radius: 0 6px 6px 0;
+}
+
+/* फोटो का बॉक्स */
+.acharya-image-box {
+    flex: 1;
+    min-width: 320px;
+    text-align: center;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.acharya-image-box .img-responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border: 3px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.acharya-image-box .img-responsive:hover {
+    transform: scale(1.02); /* माउस ले जाने पर हल्का ज़ूम */
+}
+
+.acharya-image-box .image-caption {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ==========================================
+   मोबाइल स्क्रीन के लिए सेटिंग्स
+   ========================================== */
+@media screen and (max-width: 900px) {
+    .acharya-container {
+        flex-direction: column-reverse; /* फोन पर पहले फोटो फिर लेख दिखेगा */
+        gap: 25px;
+    }
+    .acharya-text-box .article-main-title {
+        font-size: 22px;
+    }
+}
+/* ==========================================
+   9. श्रीकृष्ण जन्माष्टमी उत्सव सेक्शन स्टाइलिंग
+   ========================================== */
+.janmashtami-section {
+    background-color: #fffbeb; /* हल्का पीला बैकग्राउंड - कान्हा के रंग थीम पर */
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #f59e0b; /* कृष्ण उत्सव के लिए सुनहरी बॉर्डर */
+    box-sizing: border-box;
+}
+
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* फोटो बॉक्स सेटिंग */
+.event-image-box {
+    flex: 1;
+    min-width: 320px;
+    text-align: center;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #fde68a;
+}
+
+.event-image-box .img-responsive {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border: 3px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.event-image-box .img-responsive:hover {
+    transform: scale(1.02);
+}
+
+.event-image-box .image-caption {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 10px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* टेक्स्ट बॉक्स */
+.event-text-box {
+    flex: 1.2;
+    min-width: 320px;
+}
+
+.event-text-box .article-main-title {
+    color: #1e3a8a;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.event-text-box .article-meta {
+    color: #dc2626;
+    font-size: 13.5px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.event-text-box .article-content p {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+/* हाईलाइट बॉक्स */
+.event-highlight-box {
+    background-color: #ffffff;
+    border-left: 4px solid #f59e0b;
+    padding: 15px 20px;
+    font-size: 14.5px;
+    color: #475569;
+    margin-top: 20px;
+    border-radius: 0 6px 6px 0;
+    line-height: 1.6;
+    border: 1px solid #fde68a;
+    border-left-width: 4px;
+}
+
+/* मोबाइल स्क्रीन के लिए सेटिंग्स */
+@media screen and (max-width: 900px) {
+    .event-container {
+        flex-direction: column; /* फोन पर पहले फोटो फिर नीचे लेख आएगा */
+        gap: 25px;
+    }
+    .event-text-box .article-main-title {
+        font-size: 21px;
+    }
+}
+/* ==========================================
+   10. दो प्रधानाचार्यों का आपसी सम्मान समारोह सेक्शन
+   ========================================== */
+.teachers-honour-section {
+    background-color: #f0fdf4; /* मंच के रंगों से मेल खाता हुआ सौम्य शेड */
+    padding: 50px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #1e3a8a; /* मुख्य रॉयल ब्लू बॉर्डर */
+    box-sizing: border-box;
+}
+
+/* इमेज बॉक्स और लेआउट प्रॉपर्टीज पिछले ग्रिड ढाँचे से ऑटो-सिंक हो जाएँगी */
+.teachers-honour-section .event-image-box {
+    border: 1px solid #bbf7d0; 
+    background: #ffffff;
+}
+
+.teachers-honour-section .principal-mutual-quote {
+    border-left: 4px solid #10b981; /* हरे रंग की पट्टी संदेश के लिए */
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.teachers-honour-section .article-meta {
+    color: #10b981; 
+}
+
+/* मोबाइल रिस्पॉन्सिव सेटिंग */
+@media screen and (max-width: 900px) {
+    .teachers-honour-section .event-container {
+        flex-direction: column-reverse; /* मोबाइल पर पहले फोटो फिर नीचे लेख व्यवस्थित होगा */
+    }
+}
